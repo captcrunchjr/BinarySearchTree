@@ -488,6 +488,92 @@
       "problemMatcher": []
     },
     {
+      "label": "Run tests for BinarySearchTreeHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeHiddenTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run specific test from BinarySearchTreeHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeHiddenTest",
+          "quoting": "escape"
+        },
+        {
+          "value": "${input:DataStructures.BinarySearchTreeHiddenTest}",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check BinarySearchTreeHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeHiddenTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for BinarySearchTreeHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeHiddenTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
       "label": "Grade Assignment",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
@@ -528,6 +614,32 @@
     {
       "type": "pickString",
       "id": "DataStructures.BinarySearchTreeTest",
+      "description": "Which test to run?",
+      "options": [
+        "testInsertSingleElement",
+        "testInsertMultipleElements",
+        "testInsertDuplicatesAndRemove",
+        "testInsertNegativeNumbers",
+        "testInsertAndSearch",
+        "testInsertAndSize",
+        "testContainsEmptyTree",
+        "testSearchEmptyTree",
+        "testContainsElementInTree",
+        "testSearchElementInTree",
+        "testContainsElementNotInTree",
+        "testSearchElementNotInTree",
+        "testDeleteEmptyTree",
+        "testDeleteSingleNode",
+        "testDeleteNodeWithMultipleElements",
+        "testDeleteElementNotInTree",
+        "testDeleteDuplicateElements",
+        "testTreeTraversals"
+      ],
+      "default": "testInsertSingleElement"
+    },
+    {
+      "type": "pickString",
+      "id": "DataStructures.BinarySearchTreeHiddenTest",
       "description": "Which test to run?",
       "options": [
         "testInsertSingleElement",
