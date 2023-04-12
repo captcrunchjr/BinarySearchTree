@@ -1,0 +1,580 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Set umm to be executable",
+      "type": "shell",
+      "command": "chmod",
+      "args": [
+        {
+          "value": "+x",
+          "quoting": "escape"
+        },
+        {
+          "value": "${config:ummBinaryPath}",
+          "quoting": "weak"
+        }
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean library and target folders",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "clean",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Reset project metadata",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "reset",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check health of the project",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check-health",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Update umm executable",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "update",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests for BinarySearchTreeTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run specific test from BinarySearchTreeTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeTest",
+          "quoting": "escape"
+        },
+        {
+          "value": "${input:DataStructures.BinarySearchTreeTest}",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check BinarySearchTreeTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for BinarySearchTreeTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTreeTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run NodeNotFoundException",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "run",
+          "quoting": "escape"
+        },
+        {
+          "value": "Exceptions.NodeNotFoundException",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check NodeNotFoundException",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "Exceptions.NodeNotFoundException",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for NodeNotFoundException",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "Exceptions.NodeNotFoundException",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run EmptyTreeException",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "run",
+          "quoting": "escape"
+        },
+        {
+          "value": "Exceptions.EmptyTreeException",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check EmptyTreeException",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "Exceptions.EmptyTreeException",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for EmptyTreeException",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "Exceptions.EmptyTreeException",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run TreeNode",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "run",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.TreeNode",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check TreeNode",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.TreeNode",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for TreeNode",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.TreeNode",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run BinarySearchTree",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "run",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTree",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check BinarySearchTree",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTree",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for BinarySearchTree",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.BinarySearchTree",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check CollectionADT",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ADTs.CollectionADT",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for CollectionADT",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ADTs.CollectionADT",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check BinarySearchTreeADT",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ADTs.BinarySearchTreeADT",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for BinarySearchTreeADT",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "ADTs.BinarySearchTreeADT",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Grade Assignment",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "grade",
+          "quoting": "escape"
+        },
+        {
+          "value": "${input:gradable_assignments}",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": [
+        {
+          "applyTo": "allDocuments",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "owner": "umm",
+          "pattern": {
+            "endLine": 2,
+            "file": 1,
+            "line": 2,
+            "message": 3,
+            "regexp": "\\s*[│]\\s*([\\w./]+)\\s*[│]\\s*([0-9]+)\\s*[│]\\s*([\\w ]+)"
+          }
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "DataStructures.BinarySearchTreeTest",
+      "description": "Which test to run?",
+      "options": [
+        "testInsertSingleElement",
+        "testInsertMultipleElements",
+        "testInsertDuplicatesAndRemove",
+        "testInsertNegativeNumbers",
+        "testInsertAndSearch",
+        "testInsertAndSize",
+        "testContainsEmptyTree",
+        "testSearchEmptyTree",
+        "testContainsElementInTree",
+        "testSearchElementInTree",
+        "testContainsElementNotInTree",
+        "testSearchElementNotInTree",
+        "testDeleteEmptyTree",
+        "testDeleteSingleNode",
+        "testDeleteNodeWithMultipleElements",
+        "testDeleteElementNotInTree",
+        "testDeleteDuplicateElements",
+        "testTreeTraversals"
+      ],
+      "default": "testInsertSingleElement"
+    },
+    {
+      "type": "pickString",
+      "id": "gradable_assignments",
+      "description": "Which assignment are you working on?",
+      "options": [
+        "\"Project: Pyramid Scheme\"",
+        "\"Lab 8A - Recursion in Trees\"",
+        "\"Sample Assignment\"",
+        "\"4L. Test Driven Development\"",
+        "\"13L. Implementing Array-backed Lists\"",
+        "\"14L. Implementing ArrayStack\"",
+        "\"15L. Implementing ArrayQueue\"",
+        "\"16L. Implementing LinkedLists\"",
+        "\"Extra Credit: ShoppingList\"",
+        "\"Extra Credit: WorkAheadQueue\"",
+        "\"17L. Implementing LinkedStack\"",
+        "\"8L. Writing Junit tests - Part 2 - Student Class\"",
+        "\"8L. Writing Junit tests - Part 2 - CoOrds Class\"",
+        "\"5L. Writing JUnit tests - Part 1\"",
+        "\"Project: Round Robin Scheduler\"",
+        "\"Project: ShoppingList - Unit Tests\"",
+        "\"18L. Implementing LinkedQueue\""
+      ],
+      "default": "\"Project: Pyramid Scheme\""
+    }
+  ]
+}

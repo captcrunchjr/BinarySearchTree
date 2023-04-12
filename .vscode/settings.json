@@ -1,0 +1,12 @@
+{
+  "java.project.sourcePaths": [
+    "./src/",
+    "./test/"
+  ],
+  "java.project.outputPath": "./target/",
+  "java.project.referencedLibraries": [
+    "./lib/*.jar"
+  ],
+  "workspaceKeybindigs.ummTasksKeys.enabled": true,
+  "ummBinaryPath": "./umm"
+}
